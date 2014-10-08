@@ -10,11 +10,14 @@ env.hosts = ['209.40.90.63']
 # prompt for username
 env.user = prompt('Log in as user:', default=env.user)
 
+# common base directory for all drupal sites
+env['base_dir'] = '/opt/drupal/'
+
 
 # -- SITES -- #
 
 def ets_dev():
-	env['dir'] = '/opt/drupal/ets14/'
+	env['dir'] = env['base_dir'] + 'ets14/'
 
 # -- END SITES -- #
  
