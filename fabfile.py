@@ -22,11 +22,11 @@ def ets_dev():
 # -- END SITES -- #
  
 
-# -- ACTIONS -- #
+# -- TASKS -- #
 
 # pull updates from github into selected site 
 def pull():
 	with cd(env['dir']):
 	  run("git pull")
 
-# == END ACTIONS == #
+# == END TASKS == #
