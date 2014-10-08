@@ -30,5 +30,9 @@ def pull():
 	with cd(env['dir']):
 
 	  run("git pull")
-	  
+
+	  print "clearing all caches..."
+
+	  run("drush cc all")
+
 # == END TASKS == #
