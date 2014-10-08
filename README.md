@@ -5,8 +5,9 @@ Fabric build tasks for CCA-hosted drupal sites
 
 # Examples
 
-Pulling updates from git:
-`fab ets_dev pull`
+Pull git updates into selectd site. The site name entered must match a working drupal instance at '/opt/drupal/{site_name}'
+`fab pull`
+`Enter drupal site name:` <enter site name here> 
 
 # Requirements
 
