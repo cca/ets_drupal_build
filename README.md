@@ -5,7 +5,7 @@ Fabric build tasks for CCA-hosted drupal sites
 
 # Examples
 
-Pull updates from github into selected site:
+Pulling updates from git:
 `fab ets_dev pull`
 
 # Requirements
@@ -13,4 +13,4 @@ Pull updates from github into selected site:
 Install fabric:
 `pip install fabric`
 
-OS X users: if `pip` is not available try installing python with homebrew `brew install python`
+Note: if `pip` (python package manager) is not installed on your system: `http://pip.readthedocs.org/en/latest/installing.html`
