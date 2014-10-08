@@ -7,26 +7,28 @@ from fabric.contrib.files import exists
 # cca webserver
 env.hosts = ['209.40.90.63']
 
+# prompt for drupal site name
+env['site_dir'] = prompt('Enter drupal site name:')
+
 # prompt for username
 env.user = prompt('Log in as user:', default=env.user)
 
 # common base directory for all drupal sites
 env['base_dir'] = '/opt/drupal/'
-
-
-# -- SITES -- #
-
-def ets_dev():
-	env['dir'] = env['base_dir'] + 'ets14/'
-
-# -- END SITES -- #
  
+# working directory
+env['dir'] = env['base_dir'] + env['site_dir'] + '/'
 
-# -- TASKS -- #
+
+# == TASKS == #
 
 # pull updates from github into selected site 
 def pull():
-	with cd(env['dir']):
-	  run("git pull")
 
+	print "running `git pull` on " + env['dir']
+
+	with cd(env['dir']):
+
+	  run("git pull")
+	  
 # == END TASKS == #
